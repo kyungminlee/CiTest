@@ -13,3 +13,9 @@ jobs:
           command: |
             which julia
             julia --version
+      - run:
+          name: Show files
+          command: |
+            pwd
+            ls -al
+            
