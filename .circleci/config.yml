@@ -1,21 +1,22 @@
 version: 2
 jobs:
   build:
-    docker:
-      - image: julia
+
+    # Specify the Xcode version to use
+    macos:
+      xcode: "8.3.3"
+
     steps:
       - checkout
       - run:
-          name: Greeting
-          command: echo Hello, world.
+          name: PWD
+          command: pwd
       - run:
-          name: Print version
-          command: |
-            which julia
-            julia --version
+          name: Show Directory
+          command: ls
       - run:
-          name: Show files
-          command: |
-            pwd
-            ls -al
-            
+          name: Version
+          command: clang --version
+      - run:
+          name: Is brew installed
+          command: brew update
