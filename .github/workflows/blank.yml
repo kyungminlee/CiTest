@@ -12,4 +12,6 @@ jobs:
     steps:
     - uses: actions/checkout@v2
     - name: Show variables
+      env:
+        PR_NUMBER: ${{ github.event.pull_request.number }}
       run: set
