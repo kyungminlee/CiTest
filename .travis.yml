@@ -1,0 +1,7 @@
+notifications:
+  email: false
+language: generic
+os:
+  - linux
+after_success: |
+  set
