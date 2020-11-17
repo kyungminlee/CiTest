@@ -20,6 +20,12 @@ jobs:
       - uses: julia-actions/setup-julia@v1
         with:
           version: "1.5"
+      - name: Show variables
+        run: |
+          echo "== VARIABLES =="
+          set
+          echo "== GITHUB_EVENT_PATH $GITHUB_EVENT_PATH =="
+          cat "$GITHUB_EVENT_PATH"
       - name: Get Current Time
         uses: 1466587594/get-current-time@v2.0.0
         id: current-time
